@@ -1,0 +1,109 @@
+@mixin default_grid{
+  display: grid;
+  justify-content: center;
+  grid-gap: 1em;
+  
+
+  h2, h3{
+    text-align: center;
+  }
+}
+.movie-backdrop{
+  max-width: 100%;
+  margin: 0 auto;
+}
+.movie-grid{
+  @include default_grid();
+  align-content: center;
+  margin: 1em;
+  
+  .bold{
+    font-weight: bolder;
+  }
+  .movie-poster{
+    max-width: 400px;
+    margin-bottom: 2em;
+    margin-inline: auto;
+  }
+  .movie-content{
+    align-self: start;
+    padding: 1em;
+  }
+  .align-baseline{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;   
+
+    .icon {
+      font-size: 1.2rem;
+      align-self: flex-end;
+    }
+  }
+  .video-player{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 56.25%;
+
+    .react-player{
+      position: absolute;
+      margin: 0 auto;
+      top: 0;
+      left : 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  
+  .genre-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  .similar-container{
+    padding: 1em;
+    @include default_grid();
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+  .reviews-container{
+    color: #bdb6b6;
+    font-size: 0.9rem;
+    margin: 1em auto;
+    max-width: 1000px;  
+  }
+
+  .cast-container{
+    margin: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    overflow-x: scroll;
+  }
+
+  @media (min-width: 830px ) {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 2em auto ;
+
+    .movie-content{
+      margin-left: 2em;
+      h1{
+        margin-top: -1em;
+      }
+    }
+    .video-player{
+      grid-column: span 2;
+    }
+    
+    .title, 
+    .reviews-container,
+    .similar-container,
+    .cast-container{
+      grid-column: span 2;
+    }
+    
+   
+  }
+}

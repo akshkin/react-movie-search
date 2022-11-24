@@ -1,0 +1,13 @@
+.hero{
+  display: flex;
+  align-items: end;
+
+  @media (min-width: 600px) {
+    height: 100vh;    
+  }
+}
+.hero-content{
+  width: 60%;
+  margin: 1em;
+  color: #000;
+}
