@@ -1,6 +1,8 @@
 header{
   padding: 1em;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
   justify-content: space-between;
   align-items: baseline;
   font-size: 1.25rem;
