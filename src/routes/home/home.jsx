@@ -33,7 +33,7 @@ function Home() {
     loading ?  <FadeLoader /> :
     (
       <div className='home'>
-        <Hero option={option}/>
+        <Hero />
         <h2>Popular {displayOption}</h2>
         <div className='popular-movies'>
           {popularMovies.map(movie => <Card width="300px" option={option} movie={movie}/>)}

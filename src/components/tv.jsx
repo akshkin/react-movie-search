@@ -25,7 +25,7 @@ function TV({ tv, cast, similarMovies, player }) {
           <p className='align-baseline'><span className='bold'>Rating:</span> <StarIcon className='icon'/> { vote_average }({ vote_count })</p>
           { homepage && <p className='align-baseline'><a href={ homepage } target="_blank" rel="noreferrer">Visit homepage</a><LinkIcon className='icon'/></p>}
           <p>Overview: { overview }</p>
-          <p><span className='bold'>Created By:</span>  
+          <p><span className='bold'>Created By: </span>  
           { created_by?.length ? 
               created_by.map(creator => <span>{ creator.name }, </span>) 
               : <span> N/A</span>}
@@ -44,10 +44,10 @@ function TV({ tv, cast, similarMovies, player }) {
         <div className="video-player">
           <ReactPlayer width="100%" height="100%" className="react-player" url={`https://www/youtube.com/watch?v=${player?.id?.videoId}`} controls/>
         </div>
-        { seasons?.length &&
-            <>
+        { seasons?.length ?
+            (<>
               <h2 className='title'>Seasons</h2>
-              <div className='similar-container'>
+              <div className='cast-container'>
                 { seasons?.map(season => {
                   const { id, poster_path } = season
                   if(!poster_path) return <></>
@@ -55,6 +55,9 @@ function TV({ tv, cast, similarMovies, player }) {
                 })}
               </div>
             </>
+            ) : (
+              <p>This Tv show has no seasons</p>
+            )
         }
         {similarMovies && 
         <>

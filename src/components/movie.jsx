@@ -13,7 +13,7 @@ function Movie({ movie, player, cast, similarMovies, reviews }) {
   return (
     <>
       <div className="movie-backdrop">
-        <img  src={`${baseImg}${backdrop_path}`} alt="" />
+        <img  src={`${baseImg}${backdrop_path}`} alt={`${title} backdrop`} />
       </div>
       <div className='movie-grid'>
         <div className='movie-content'>

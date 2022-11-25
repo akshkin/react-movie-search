@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Context } from '../../context/context'
 
 import { fetchPopular } from '../../fetchApi'
 import "./hero.styles.scss"
 
-function Hero({ option }) {
+function Hero() {
+  const { option } = useContext(Context)
   const [hero, setHero] = useState({})
   const navigate = useNavigate()
   
@@ -20,22 +22,23 @@ function Hero({ option }) {
   const baseImg = 'https://image.tmdb.org/t/p/original'
   const style ={
     backgroundImage: `url(${baseImg}${hero.backdrop_path})`, 
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     width: "100%",
-    minHeight: "40vh",
-    height: "100vh",
-    cursor: "pointer"
+    minHeight: "50vh",
+    cursor: "pointer",
+    margin: "0 auto",
   }
-  const { title, overview, name } = hero
+
+  const { id, title, backdrop_path, overview, name } = hero
   return (
-    <div onClick={() => navigate(`/${option}/${hero.id}`)} className='hero' style={style}>
-      <div className='hero-content'>
-        {/* <h1>{title || name}</h1>
-        <p>{overview}</p> */}
+    <>
+      <h1 className='hero-title'>Now {option === "movie" ? "playing" : "airing"}</h1>
+      <div onClick={() => navigate(`/${option}/${id}`)} className='hero' >
+        <img src={`${baseImg}${backdrop_path}`} alt={`${title || name} backdrop`}/>
       </div>
-    </div>
+    </>
   )
 }
 

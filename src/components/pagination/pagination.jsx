@@ -17,6 +17,7 @@ function Pagination() {
     searchQuery()
   }
 
+  
   const notOne = currentPage !== 1
   const notLast = currentPage !== totalPages
 
@@ -29,11 +30,21 @@ function Pagination() {
         <button className='page' onClick={() => setCurrentPage(1)}>
           1
         </button>}
-      <span>{notOne &&  currentPage > 2  && "..."} </span>
-      <button className='active-page' onClick={() => setCurrentPage(currentPage)}>
+      {notOne &&  currentPage > 3  && <span>...</span>}
+      {notOne && currentPage > 2 && 
+        <button onClick={() => setCurrentPage(currentPage - 1)}>
+          {currentPage - 1}
+        </button>
+      }
+      <button className='active-page' onClick={() => setCurrentPage(currentPage)}>      
         {currentPage}
       </button>
-      <span>{((currentPage !== totalPages) && (currentPage !== totalPages - 1)) && "..."}</span>
+      {notLast && (currentPage < totalPages - 1 ) && 
+        <button onClick={() => setCurrentPage(currentPage + 1)}>
+          {currentPage + 1}
+        </button>
+      }
+      {((currentPage !== totalPages) && (currentPage < totalPages - 2)) && <span>...</span>}
       {notLast && 
         <button className='page' onClick={() => setCurrentPage(totalPages)}>
           {totalPages}

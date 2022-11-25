@@ -16,9 +16,11 @@ function Review({ review  }) {
     <div style={{margin: "1em"}}>
       <h4>{author} says</h4>
       <p>{show ? content : content.substr(0, 250)}   
+      {content.length > 250 && 
         <span aria-label='toggle reading more or less of review' style={style}  onClick={toggleReview}>
           {show ? "   ...read less" : "   ...read more"}
         </span>
+      }
       </p>
     </div>
   )
