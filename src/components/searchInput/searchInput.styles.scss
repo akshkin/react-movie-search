@@ -1,3 +1,4 @@
+$height: 40px;
 form{
   display: flex;
   // margin: 0 1em 1em;
@@ -5,21 +6,28 @@ form{
 .search-input{
   width: 90%;
   max-width: 500px;
-  height: 50px;
+  height: $height;
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
   font-family: inherit;
   font-size: 1.25rem;
   padding: 0.5em;
+
+  @media (min-width: 800px) {
+    height: 50px;
+  }
 }
 .search-btn{
   background-color: azure;
   color: #252525;
-  // padding: 0.5em 1.5em;
   border: 0;
-  height: 50px;
+  height: $height;
   font-family: inherit;
   font-size: 1rem;
   border-radius: 0 5px 5px 0;
+  
+  @media (min-width: 800px) {
+    height: 50px
+  }
 }
