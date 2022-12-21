@@ -33,7 +33,10 @@ function TV({ tv, cast, similarMovies, player }) {
           <p><span className='bold'>Number of episodes: </span> {number_of_episodes}</p>
           <p><span className='bold'>Number of Seasons: </span> {number_of_seasons}</p>
         </div>
-        <img className='movie-poster' src={`${baseImg}${poster_path}`} alt=""/>
+        <div className='movie-poster'>
+          <img className='movie-poster' src={`${baseImg}${poster_path}`} alt=""/>
+        </div>
+      </div>
         <h3 className='title'>Cast</h3>
         <div className='cast-container'>
           { cast?.length ? 
@@ -69,7 +72,6 @@ function TV({ tv, cast, similarMovies, player }) {
           </div>
         </>
         }
-      </div>
     </>
   )
 }

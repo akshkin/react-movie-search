@@ -1,12 +1,12 @@
+$max-width: 1600px ;
 @mixin default_grid{
   display: grid;
   justify-content: center;
-  grid-gap: 1em;
-  
+  grid-gap: 1em;  
 
-  h2, h3{
-    text-align: center;
-  }
+}
+h2, h3{
+  text-align: center;
 }
 .movie-backdrop{
   width: 100%;
@@ -18,9 +18,12 @@
   }
 }
 .movie-grid{
-  @include default_grid();
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1em;
+  padding: 2em;
   
   .bold{
     font-weight: bolder;
@@ -31,7 +34,6 @@
     margin-inline: auto;
   }
   .movie-content{
-    align-self: start;
     padding: 1em;
   }
   .align-baseline{
@@ -44,6 +46,27 @@
       align-self: flex-end;
     }
   }
+
+  @media (min-width: 900px ) {
+    margin-top: 2em;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .movie-content{
+      margin-left: 1em;
+      width: 60%;
+      h1{
+        margin-top: -1em;
+      }
+    }
+    
+  }
+  @media (min-width: 1200px) {
+    .movie-content{
+      margin-left: 3em;
+    }
+  }
+}
   .video-player{
     width: 90%;
     margin: 0 auto;
@@ -71,6 +94,7 @@
     @include default_grid();
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+    max-width: $max-width;
   }
   .reviews-container{
     color: #bdb6b6;
@@ -80,38 +104,21 @@
     max-height: 600px;
     overflow-y: scroll;
     box-shadow: rgba(255,255,255,0.6);
+    transition: transformY() 0.3s;
   }
 
   .cast-container{
-    margin: 1em;
+    padding: 1em;
+    margin: 1em ;
     display: flex;
     flex-wrap: nowrap;
     gap: 1em;
     overflow-x: scroll;
+    max-width: $max-width;
+    @media (min-width: 800px) {
+      margin: 1em auto;
+    }
   }
 
-  @media (min-width: 830px ) {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1800px;
-    margin: 2em auto ;
-
-    .movie-content{
-      margin-left: 2em;
-      h1{
-        margin-top: -1em;
-      }
-    }
-    .video-player{
-      grid-column: span 2;
-    }
-    
-    .title, 
-    .reviews-container,
-    .similar-container,
-    .cast-container{
-      grid-column: span 2;
-    }
-    
    
-  }
-}
+  

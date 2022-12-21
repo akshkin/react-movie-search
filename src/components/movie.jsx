@@ -35,7 +35,10 @@ function Movie({ movie, player, cast, similarMovies, reviews }) {
           <p><span className='bold'>Date of Release:</span> {release_date}</p>
           <p className='align-baseline'><span className='bold'>Rating: </span> <StarIcon className='icon' /> {vote_average?.toFixed(1)}({vote_count})</p>
         </div>
-        <img className='movie-poster' src={`${baseImg}${poster_path}`} alt={`${title} poster`}/>
+        <div className='movie-poster'>
+          <img className='movie-poster' src={`${baseImg}${poster_path}`} alt={`${title} poster`}/>
+        </div>
+      </div>
         
         <h3 className='title'>Watch video</h3>
         <div className="video-player">
@@ -74,7 +77,6 @@ function Movie({ movie, player, cast, similarMovies, reviews }) {
             </div>
           </>
         }
-      </div>
     </>
   )
 }

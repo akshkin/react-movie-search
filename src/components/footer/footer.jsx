@@ -2,8 +2,6 @@ import React from 'react'
 import { ReactComponent as TMDb } from "../../assets/tmdb-logo.svg"
 import "./footer.styles.scss"
 
-//"https://www.themoviedb.org/".
-  //
 function Footer() {
   return (
     <footer>      
