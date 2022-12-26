@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Context } from '../../context/context'
 import { ReactComponent as PreviousIcon } from "../../assets/previou.svg"
 import { ReactComponent as NextIcon } from "../../assets/next.svg"
 
 function Pagination() {
-
   const { currentPage, setCurrentPage, searchQuery, totalPages, option } = useContext(Context)
+  const [prevOption, setPrevOption] = useState(option)
 
   const prevPage = () => {
     setCurrentPage(currentPage - 1)
@@ -19,7 +19,11 @@ function Pagination() {
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [option])
+  }, [option, setCurrentPage])
+
+  // if(prevOption !== option){
+  //   setCurrentPage(1)    
+  // }
   
   const notOne = currentPage !== 1
   const notLast = currentPage !== totalPages

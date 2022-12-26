@@ -9,11 +9,11 @@ import "./searchPage.styles.scss"
 
 function SearchPage() {
   const { query } = useParams()
-  const { movies, option } = useContext(Context)
+  const { movies, option, searchTerm } = useContext(Context)
 
   return (
     <>      
-      <Pagination />  
+      {searchTerm ? <Pagination />: null}  
       <h2><span style={{color: "#bdbbb6", marginLeft: "2em"}}>Search results for</span>  {query}</h2>
       <div className='card-container'>
         {movies && movies.map(movie => {
@@ -23,7 +23,7 @@ function SearchPage() {
           )       
         })}
       </div>
-      <Pagination />
+      {searchTerm ? <Pagination /> : null}
     </>
   )
 }
