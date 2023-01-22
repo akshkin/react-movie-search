@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Context } from '../../context/context'
 import { ReactComponent as PreviousIcon } from "../../assets/previou.svg"
 import { ReactComponent as NextIcon } from "../../assets/next.svg"
+import "./pagination.styles.scss"
 
 function Pagination() {
   const { currentPage, setCurrentPage, searchQuery, totalPages, option } = useContext(Context)
-  const [prevOption, setPrevOption] = useState(option)
-
+  
   const prevPage = () => {
     setCurrentPage(currentPage - 1)
     searchQuery()
@@ -21,10 +21,10 @@ function Pagination() {
     setCurrentPage(1)
   }, [option, setCurrentPage])
 
-  // if(prevOption !== option){
-  //   setCurrentPage(1)    
-  // }
-  
+  const returnClassName = (page) => {
+    return page === currentPage ? "active-page" : "page"
+  }
+
   const notOne = currentPage !== 1
   const notLast = currentPage !== totalPages
 
@@ -34,26 +34,26 @@ function Pagination() {
         <PreviousIcon />
       </button>
       {notOne &&  
-        <button className='page' onClick={() => setCurrentPage(1)}>
+        <button className={returnClassName(1)} onClick={() => setCurrentPage(1)}>
           1
         </button>}
       {notOne &&  currentPage > 3  && <span>...</span>}
       {notOne && currentPage > 2 && 
-        <button onClick={() => setCurrentPage(currentPage - 1)}>
+        <button className={returnClassName(currentPage - 1)} onClick={() => setCurrentPage(currentPage - 1)}>
           {currentPage - 1}
         </button>
       }
-      <button className='active-page' onClick={() => setCurrentPage(currentPage)}>      
+      <button className={returnClassName(currentPage)} onClick={() => setCurrentPage(currentPage)}>      
         {currentPage}
       </button>
       {notLast && (currentPage < totalPages - 1 ) && 
-        <button onClick={() => setCurrentPage(currentPage + 1)}>
+        <button className={returnClassName(currentPage + 1)} onClick={() => setCurrentPage(currentPage + 1)}>
           {currentPage + 1}
         </button>
       }
       {((currentPage !== totalPages) && (currentPage < totalPages - 2)) && <span>...</span>}
       {notLast && 
-        <button className='page' onClick={() => setCurrentPage(totalPages)}>
+        <button className={returnClassName(totalPages)} onClick={() => setCurrentPage(totalPages)}>
           {totalPages}
         </button>}
       <button disabled={currentPage === totalPages} onClick={nextPage}>

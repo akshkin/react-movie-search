@@ -33,21 +33,21 @@ function Home() {
     loading ?  <FadeLoader /> :
     (
       <div className='home'>
-        <Hero />
+        <Hero option={option}/>
         <h2>Popular {displayOption}</h2>
         <div className='popular-movies'>
-          {popularMovies.map(movie => <Card width="300px" option={option} movie={movie}/>)}
+          {popularMovies.map(movie => <Card key={movie.id} width="300px" option={option} movie={movie}/>)}
         </div>
         <h2>Top rated {displayOption}</h2>
         <div className='popular-movies'>
-          {topRated.map(movie => <Card width="300px" option={option} movie={movie}/>)}
+          {topRated.map(movie => <Card key={movie.id} width="300px" option={option} movie={movie}/>)}
         </div>
         {
           latest && 
           <>
             <h2>Latest {displayOption}</h2>
             <div className='popular-movies'>
-              {latest?.map(movie => <Card width="300px" option={option} movie={movie}/>)}
+              {latest?.map(movie => <Card key={movie.id} width="300px" option={option} movie={movie}/>)}
             </div>
           </>
         }

@@ -11,7 +11,6 @@ function ContextProvider ({ children }) {
   const [option, setOption] = useState("movie" || sessionStorage.getItem("option"))
   const [thisId, setThisId] = useState(sessionStorage.getItem("search"))
   
-  console.log(option)
 
   useEffect(() => {
     setOption(sessionStorage.getItem("option"))
@@ -30,9 +29,7 @@ function ContextProvider ({ children }) {
           setLoading(false)      
         })
         .catch(error => console.log("Error: ", error)) 
-  }
- 
-   
+  }   
 
   const value = { 
     loading,

@@ -8,6 +8,7 @@ import { ReactComponent as LinkIcon  } from "../assets/link.svg"
 function Movie({ movie, player, cast, similarMovies, reviews }) {
 
   const { title, tagline, genres, overview, homepage, runtime, release_date, vote_average, vote_count, poster_path, backdrop_path } = movie
+
   const baseImg = 'https://image.tmdb.org/t/p/original'
 
   return (
@@ -57,12 +58,17 @@ function Movie({ movie, player, cast, similarMovies, reviews }) {
           <p className='reviews-container'>No reviews to show</p>
         )
       }
-      <h3 className='title'>Top Cast</h3>
-      <div className='cast-container'>
-        {
-          cast && cast.map(char => <Cast key={char.id} baseImg={baseImg} char={char} />).filter((_, index) => index < 10)
-        }
-      </div>
+      {
+        cast && 
+        <>
+          <h3 className='title'>Top Cast</h3>
+          <div className='cast-container'>
+            {
+              cast.map(char => <Cast key={char.id} baseImg={baseImg} char={char} />).filter((_, index) => index < 10)
+            }
+          </div>
+        </>
+      }
       {
         similarMovies && 
         <>

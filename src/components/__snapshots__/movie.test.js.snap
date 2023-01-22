@@ -1,0 +1,600 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Movie correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="movie-backdrop"
+      >
+        <img
+          alt="Avatar: The Way of Water backdrop"
+          src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/avatar-backdrop"
+        />
+      </div>
+      <div
+        class="movie-grid"
+      >
+        <div
+          class="movie-content"
+        >
+          <h1>
+            Avatar: The Way of Water
+          </h1>
+          <p>
+            - 
+            <i>
+              - Return to Pandora.
+            </i>
+          </p>
+          <div
+            class="genre-container"
+          >
+            <span
+              class="genre"
+            />
+            <span
+              class="genre"
+            />
+            <span
+              class="genre"
+            />
+          </div>
+          <p>
+            <span
+              class="bold"
+            >
+              Overview:
+            </span>
+             
+            Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.
+          </p>
+          <p
+            class="align-baseline"
+          >
+            <a
+              href="https://www.avatar.com/movies/avatar-the-way-of-water"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Visit homepage 
+            </a>
+            <svg
+              class="icon"
+            >
+              link.svg
+            </svg>
+          </p>
+          <p
+            class="align-baseline"
+          >
+            <span
+              class="bold"
+            >
+              Runtime: 
+            </span>
+            <svg
+              class="icon"
+            >
+              clock.svg
+            </svg>
+             
+            192 minutes
+             minutes
+          </p>
+          <p>
+            <span
+              class="bold"
+            >
+              Date of Release:
+            </span>
+             
+            2022-12-14
+          </p>
+          <p
+            class="align-baseline"
+          >
+            <span
+              class="bold"
+            >
+              Rating: 
+            </span>
+             
+            <svg
+              class="icon"
+            >
+              starIcon.svg
+            </svg>
+             
+            7.7
+            (
+            4419
+            )
+          </p>
+        </div>
+        <div
+          class="movie-poster"
+        >
+          <img
+            alt="Avatar: The Way of Water poster"
+            class="movie-poster"
+            src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/avatar-backdrop"
+          />
+        </div>
+      </div>
+      <h3
+        class="title"
+      >
+        Watch video
+      </h3>
+      <div
+        class="video-player"
+      >
+        <div
+          class="react-player"
+          style="width: 100%; height: 100%;"
+        />
+      </div>
+      <h3
+        class="title"
+      >
+        Reviews
+      </h3>
+      <div
+        class="reviews-container"
+      >
+        <div
+          style="margin: 1em;"
+        >
+          <h4>
+            Kay Cee
+             says
+          </h4>
+          <p>
+            Audio was superb. Video was great, but it the 60fps takes some getting used to. Story was awesome!
+          </p>
+        </div>
+        <div
+          style="margin: 1em;"
+        >
+          <h4>
+            Appfel
+             says
+          </h4>
+          <p>
+            I really enjoyed Avatar: The way of water! It's a great second part to Avatar, getting back into the fight, setting a new environment and it actually left me even more thinking, of how we just destroy our earth and how bad humans can get. It is a lon
+            <span
+              aria-label="toggle reading more or less of review"
+              style="color: rgb(246, 235, 162); cursor: pointer;"
+            >
+                 ...read more
+            </span>
+          </p>
+        </div>
+      </div>
+      <h3
+        class="title"
+      >
+        Top Cast
+      </h3>
+      <div
+        class="cast-container"
+      >
+        <div
+          class="character"
+        >
+          <img
+            alt="Sam Worthington"
+            class="character-poster"
+            src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/poster"
+          />
+          <p>
+            Sam Worthington
+             as 
+            Sully
+          </p>
+        </div>
+        <div
+          class="character"
+        >
+          <img
+            alt="Zoe Saldna"
+            class="character-poster"
+            src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/poster"
+          />
+          <p>
+            Zoe Saldna
+             as 
+            Neytiri
+          </p>
+        </div>
+      </div>
+      <h2
+        class="title"
+      >
+        You may also like: 
+      </h2>
+      <div
+        class="cast-container"
+      >
+        <div
+          class="card"
+        >
+          <a
+            href="/movie/4"
+          >
+            <img
+              alt=""
+              class="poster"
+              src="https://image.tmdb.org/t/p/w500https://image.tmdb.org/t/p/w500/poster"
+            />
+            <p>
+              <svg>
+                starIcon.svg
+              </svg>
+               
+              6.0
+              (
+              20
+              )
+            </p>
+            <p>
+              Date of release: 
+              1-1-2020
+            </p>
+          </a>
+        </div>
+        <div
+          class="card"
+        >
+          <a
+            href="/movie/9"
+          >
+            <img
+              alt=""
+              class="poster"
+              src="https://image.tmdb.org/t/p/w500https://image.tmdb.org/t/p/w500/poster"
+            />
+            <p>
+              <svg>
+                starIcon.svg
+              </svg>
+               
+              7.0
+              (
+              203
+              )
+            </p>
+            <p>
+              Date of release: 
+              1-1-2020
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="movie-backdrop"
+    >
+      <img
+        alt="Avatar: The Way of Water backdrop"
+        src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/avatar-backdrop"
+      />
+    </div>
+    <div
+      class="movie-grid"
+    >
+      <div
+        class="movie-content"
+      >
+        <h1>
+          Avatar: The Way of Water
+        </h1>
+        <p>
+          - 
+          <i>
+            - Return to Pandora.
+          </i>
+        </p>
+        <div
+          class="genre-container"
+        >
+          <span
+            class="genre"
+          />
+          <span
+            class="genre"
+          />
+          <span
+            class="genre"
+          />
+        </div>
+        <p>
+          <span
+            class="bold"
+          >
+            Overview:
+          </span>
+           
+          Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.
+        </p>
+        <p
+          class="align-baseline"
+        >
+          <a
+            href="https://www.avatar.com/movies/avatar-the-way-of-water"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Visit homepage 
+          </a>
+          <svg
+            class="icon"
+          >
+            link.svg
+          </svg>
+        </p>
+        <p
+          class="align-baseline"
+        >
+          <span
+            class="bold"
+          >
+            Runtime: 
+          </span>
+          <svg
+            class="icon"
+          >
+            clock.svg
+          </svg>
+           
+          192 minutes
+           minutes
+        </p>
+        <p>
+          <span
+            class="bold"
+          >
+            Date of Release:
+          </span>
+           
+          2022-12-14
+        </p>
+        <p
+          class="align-baseline"
+        >
+          <span
+            class="bold"
+          >
+            Rating: 
+          </span>
+           
+          <svg
+            class="icon"
+          >
+            starIcon.svg
+          </svg>
+           
+          7.7
+          (
+          4419
+          )
+        </p>
+      </div>
+      <div
+        class="movie-poster"
+      >
+        <img
+          alt="Avatar: The Way of Water poster"
+          class="movie-poster"
+          src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/avatar-backdrop"
+        />
+      </div>
+    </div>
+    <h3
+      class="title"
+    >
+      Watch video
+    </h3>
+    <div
+      class="video-player"
+    >
+      <div
+        class="react-player"
+        style="width: 100%; height: 100%;"
+      />
+    </div>
+    <h3
+      class="title"
+    >
+      Reviews
+    </h3>
+    <div
+      class="reviews-container"
+    >
+      <div
+        style="margin: 1em;"
+      >
+        <h4>
+          Kay Cee
+           says
+        </h4>
+        <p>
+          Audio was superb. Video was great, but it the 60fps takes some getting used to. Story was awesome!
+        </p>
+      </div>
+      <div
+        style="margin: 1em;"
+      >
+        <h4>
+          Appfel
+           says
+        </h4>
+        <p>
+          I really enjoyed Avatar: The way of water! It's a great second part to Avatar, getting back into the fight, setting a new environment and it actually left me even more thinking, of how we just destroy our earth and how bad humans can get. It is a lon
+          <span
+            aria-label="toggle reading more or less of review"
+            style="color: rgb(246, 235, 162); cursor: pointer;"
+          >
+               ...read more
+          </span>
+        </p>
+      </div>
+    </div>
+    <h3
+      class="title"
+    >
+      Top Cast
+    </h3>
+    <div
+      class="cast-container"
+    >
+      <div
+        class="character"
+      >
+        <img
+          alt="Sam Worthington"
+          class="character-poster"
+          src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/poster"
+        />
+        <p>
+          Sam Worthington
+           as 
+          Sully
+        </p>
+      </div>
+      <div
+        class="character"
+      >
+        <img
+          alt="Zoe Saldna"
+          class="character-poster"
+          src="https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/w500/poster"
+        />
+        <p>
+          Zoe Saldna
+           as 
+          Neytiri
+        </p>
+      </div>
+    </div>
+    <h2
+      class="title"
+    >
+      You may also like: 
+    </h2>
+    <div
+      class="cast-container"
+    >
+      <div
+        class="card"
+      >
+        <a
+          href="/movie/4"
+        >
+          <img
+            alt=""
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500https://image.tmdb.org/t/p/w500/poster"
+          />
+          <p>
+            <svg>
+              starIcon.svg
+            </svg>
+             
+            6.0
+            (
+            20
+            )
+          </p>
+          <p>
+            Date of release: 
+            1-1-2020
+          </p>
+        </a>
+      </div>
+      <div
+        class="card"
+      >
+        <a
+          href="/movie/9"
+        >
+          <img
+            alt=""
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500https://image.tmdb.org/t/p/w500/poster"
+          />
+          <p>
+            <svg>
+              starIcon.svg
+            </svg>
+             
+            7.0
+            (
+            203
+            )
+          </p>
+          <p>
+            Date of release: 
+            1-1-2020
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -53,12 +53,13 @@ function MovieDetail() {
       setLoading(false)   
     }, [thisMovie, option, thisId, searchId, movieId, setThisId, setLoading])
     
-    useEffect(() => {
-      fetchDataFromApi(`search?part=snippet&q=${video?.name}`)
-        .then(data => setPlayer(data?.items[0]))      
+  useEffect(() => {
+    fetchDataFromApi(`search?part=snippet&q=${video?.name}`)
+      .then(data => setPlayer(data?.items[0]))      
   }, [searchId, video])
   
   console.log(cast)
+  console.log(player)
 
 
   useEffect(()=>{
@@ -69,7 +70,7 @@ function MovieDetail() {
   return (option === "movie" && !loading) ?      
       (
         <>
-          <Movie player={player} reviews={reviews} movie={movie} cast={cast} similarMovies={similarMovies}/>
+          <Movie player={player} reviews={reviews} movie={movie} cast={cast} similarMovies={similarMovies} />
         </>
       ) : (
         <>
@@ -78,5 +79,5 @@ function MovieDetail() {
       )
   
 }
-
+//player={player} reviews={reviews} movie={movie} cast={cast} similarMovies={similarMovies}
 export default MovieDetail

@@ -1,0 +1,28 @@
+import { setupServer } from "msw/lib/node";
+import { handlers } from "./handlers";
+
+export const server = setupServer(...handlers)
+
+// export function createServer(){
+//     // const handlers = handlerConfig.map(config => {
+//     //     return rest[config.method || "get"](config.path, (req, res, ctx) => {
+//     //         return res(
+//     //             ctx.json(
+//     //                 config.res(req, res, ctx)
+//     //             )
+//     //         )
+//     //     })
+//     // })
+
+//     beforeAll(() => {
+//         server.listen()
+//     })
+
+//     afterEach(() => {
+//         server.resetHandlers()
+//     })
+
+//     afterAll(() => {
+//         server.close()
+//     })
+// }

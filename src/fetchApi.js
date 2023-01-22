@@ -6,9 +6,15 @@ const options = {
 	}
 };
 
-const apiKey = "1d893d257088d8cf0cf34ce6257955bd"
-const baseYtUrl = "https://youtube-v31.p.rapidapi.com"
-const baseTmdbUrl = "https://api.themoviedb.org/3"
+const tmdbOptions = {
+  headers: {
+    "Request URL": "https://api/themoviedb.org/3"
+  }
+}
+
+export const apiKey = "1d893d257088d8cf0cf34ce6257955bd"
+export const baseYtUrl = "https://youtube-v31.p.rapidapi.com"
+export const baseTmdbUrl = "https://api.themoviedb.org/3"
 
 export const fetchTrailer = async (name) => {
   const response = await fetch(`${baseYtUrl}/search?q=${name}&part=snippet%2Cid&regionCode=US&maxResults=50&order=date`, options)
@@ -23,10 +29,8 @@ export const fetchDataFromApi = async (url) => {
 }
 
 export const fetchPopular = async (option, category) => {
-  const response = await fetch(`
-  https://api.themoviedb.org/3/${option}/${category}?api_key=${apiKey}&language=en-US&page=1`)
+  const response = await fetch(`${baseTmdbUrl}/${option}/${category}?api_key=${apiKey}&language=en-US&page=1`)
   const data = await response.json()
-  console.log(data)
   return data
 }
 

@@ -9,7 +9,7 @@ function Navigation() {
   const { query } = useParams()
   const location = useLocation()
 
-  const { option, setOption, currentPage, searchQuery, searchTerm, setSearchTerm } = useContext(Context)
+  const { option, setOption, currentPage, searchQuery, searchTerm } = useContext(Context)
 
   const reqLocation = location.pathname === "/" || location.pathname.split("/")[1] === `search`
 
@@ -21,18 +21,26 @@ function Navigation() {
     sessionStorage.setItem("option", option)
   }, [option, searchTerm])
 
-  const activeMovie = option === "movie" ? "active" : ""
-  const activeTv= option === "tv" ? "active" : "" 
- 
- 
+  const options = ["movie", "tv"]
+  // const activeMovie = option === "movie" ? "active" : ""
+  // const activeTv= option === "tv" ? "active" : "" 
+   
+  const capitalize = (text) => text[0].toUpperCase() + text.slice(1)
 
   return (
     <header>
       <Link to="/"><HomeIcon className='icon'/>Home</Link>
       {reqLocation &&
         <ul>
-          <li className={activeMovie} onClick={() => setOption("movie")}>Movie</li>
-          <li className={activeTv} onClick={() => setOption("tv")}>Tv</li>
+          {
+            options.map((thisOption, index) => 
+              <li key={index}  className={thisOption === option ? "active" : ""} onClick={() => setOption(thisOption)}>
+                {capitalize(thisOption)}                
+              </li>
+            )
+          }
+          {/* <li className={activeMovie} onClick={() => setOption("movie")}>Movie</li>
+          <li className={activeTv} onClick={() => setOption("tv")}>Tv</li> */}
         </ul>
       }
       <SearchInput />
