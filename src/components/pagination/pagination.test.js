@@ -33,8 +33,6 @@ describe("should render Pagination", () => {
         const user = userEvent.setup()
         render(<Pagination />)
         const buttons = await screen.findAllByRole("button")
-        buttons.map(button => console.log(button.textContent))
-
         await user.click(buttons[0])
         expect(buttons[1]).toHaveClass("active-page")
     })

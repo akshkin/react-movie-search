@@ -2,10 +2,10 @@ import { render } from "@testing-library/react";
 import { ContextProvider } from "./context/context";
 import { MemoryRouter } from "react-router-dom";
 
-const renderWithContext = (ui, options) => {
+const renderWithContext = (children, options) => {
     render(
         <MemoryRouter>
-            {ui}
+            {children}
         </MemoryRouter>, 
         { wrapper: ContextProvider, ...options}
     )

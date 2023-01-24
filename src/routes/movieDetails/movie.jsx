@@ -21,8 +21,7 @@ function MovieDetail() {
   const [player, setPlayer] = useState("")
 
   const thisMovie = movies?.find(movie => movie.id.toString() === movieId)
-
-  
+ 
    
   const searchId = thisMovie?.id || movieId
   
@@ -58,10 +57,7 @@ function MovieDetail() {
       .then(data => setPlayer(data?.items[0]))      
   }, [searchId, video])
   
-  console.log(cast)
-  console.log(player)
-
-
+ 
   useEffect(()=>{
     window.scrollTo(0,0);
   }, [thisId]);
@@ -79,5 +75,5 @@ function MovieDetail() {
       )
   
 }
-//player={player} reviews={reviews} movie={movie} cast={cast} similarMovies={similarMovies}
+
 export default MovieDetail
