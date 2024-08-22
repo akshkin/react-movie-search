@@ -1,15 +1,18 @@
+.home {
+  // padding: 1em;
 
-.home{
-  padding: 1em;
+  // h2 {
+  //   margin-top: 3em;
+  // }
 }
-.popular-movies{
+.popular-movies {
+  padding: 1em;
   display: flex;
   gap: 1em;
   flex-wrap: nowrap;
-  overflow-x: scroll; 
-  
-  .card{
+  overflow-x: scroll;
+
+  .card {
     margin-bottom: 0.5em;
-    
   }
 }

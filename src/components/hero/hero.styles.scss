@@ -1,13 +1,45 @@
-.hero{
+.hero {
+  position: relative;
+  top: 0;
   width: 100%;
   margin: 0 auto;
-  max-height: 100vh;
+  max-height: 90vh;
   margin-bottom: 1em;
+  overflow: hidden;
 
-  img{
+  .hero-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1em;
+    z-index: 1;
+    width: 100%;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.7), transparent);
+    background: linear-gradient(
+      to bottom-right,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+  }
+
+  img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 100%;
     cursor: pointer;
   }
 
+  .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.563);
+    padding: 0.5em 1.5em;
+    color: black;
+    font-weight: 500;
+  }
 }
