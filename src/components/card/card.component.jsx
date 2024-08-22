@@ -18,8 +18,11 @@ function Card({ movie, option }) {
   return (
     <div className="card">
       <Link to={`/${option}/${id}`}>
-        {/* <h3>{title || name}</h3>       */}
-        <img className="poster" src={`${baseImg}${poster_path}`} alt="" />
+        <img
+          className="poster"
+          src={`${baseImg}${poster_path}`}
+          alt={title || name}
+        />
         {vote_average && vote_count ? (
           <p>
             <StarIcon /> {vote_average.toFixed(1)} ({vote_count})
