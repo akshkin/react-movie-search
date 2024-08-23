@@ -45,7 +45,7 @@ function Card({ movie, option }) {
           </p>
         )}
         <p>
-          {releaseAirText}: {releaseAirDate}
+          {releaseAirText}: {releaseAirDate || "N/A"}
         </p>
       </Link>
     </div>
