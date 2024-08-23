@@ -18,11 +18,19 @@ function Card({ movie, option }) {
   return (
     <div className="card">
       <Link to={`/${option}/${id}`}>
-        <img
-          className="poster"
-          src={`${baseImg}${poster_path}`}
-          alt={title || name}
-        />
+        {poster_path ? (
+          <img
+            className="poster"
+            src={`${baseImg}${poster_path}`}
+            alt={title || name}
+          />
+        ) : (
+          <img
+            className="no-poster"
+            src="/assets/images/placeholder.jpg"
+            alt={title || name}
+          />
+        )}
         {vote_average && vote_count ? (
           <p>
             <StarIcon /> {vote_average.toFixed(1)} ({vote_count})
