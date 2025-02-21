@@ -99,7 +99,7 @@ function Movie({ movie, player, cast, similarMovies, reviews }) {
       ) : (
         <p className="reviews-container">No reviews to show</p>
       )}
-      {cast && (
+      {cast.length > 0 && (
         <>
           <h3 className="title">Top Cast</h3>
           <div className="cast-container">
