@@ -1,13 +1,16 @@
-.character{
+.character {
   min-width: 200px;
   max-width: 250px;
-  border: 1px solid #fff;
+  // border: 1px solid #fff;
   border-radius: 5px;
   padding: 0.5em;
   text-align: center;
   margin-bottom: 1em;
 
-  .character-poster{
-    max-width: 100%;
+  .character-poster {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 }

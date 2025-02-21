@@ -13,7 +13,11 @@ function Card({ movie, option }) {
     vote_average,
     vote_count,
     release_date,
+    first_air_date,
   } = movie;
+
+  const releaseAirDate = option === "movie" ? release_date : first_air_date;
+  const releaseAirText = option === "movie" ? "Date of release" : "First aired";
 
   return (
     <div className="card">
@@ -40,7 +44,9 @@ function Card({ movie, option }) {
             <StarIcon /> 0 (0)
           </p>
         )}
-        {release_date && <p>Date of release: {release_date}</p>}
+        <p>
+          {releaseAirText}: {releaseAirDate || "N/A"}
+        </p>
       </Link>
     </div>
   );
