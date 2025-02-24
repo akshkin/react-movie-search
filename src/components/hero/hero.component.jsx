@@ -44,15 +44,16 @@ function Hero({ option }) {
       >
         {data.map((result, index) => (
           <SwiperSlide key={result.id} virtualIndex={index}>
-            <h1 className="hero-title">
+            {/* <h1 className="hero-title">
               Now {option === "movie" ? "playing" : "airing"}
-            </h1>
+            </h1> */}
+
+            <img
+              src={`${baseImg}${result.backdrop_path}`}
+              alt={`${result.title || result.name} backdrop`}
+            />
             <Link to={`/${option}/${result.id}`}>
-              <img
-                src={`${baseImg}${result.backdrop_path}`}
-                alt={`${result.title || result.name} backdrop`}
-              />
-              <p className="title">{result.title || result.name}</p>
+              <h1 className="title">{result.title || result.name}</h1>
             </Link>
           </SwiperSlide>
         ))}

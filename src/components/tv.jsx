@@ -115,7 +115,7 @@ function TV({ tv, cast, similarMovies, player }) {
       ) : (
         <p className="no-seasons">This Tv show has no seasons</p>
       )}
-      {similarMovies && similarMovies.length > 0 && (
+      {similarMovies && similarMovies.length && (
         <>
           <h2 className="title">You may also like: </h2>
           <div className="cast-container">
